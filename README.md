@@ -14,7 +14,7 @@ So I generated the documentation in the same format as the original.
 
 ## Preview
 
-![alt text](https://github.com/omarolleau/4D-Origin-Docs/PREVIEW.png "Preview")
+![alt text](https://github.com/omarolleau/4D-Origin-Docs/blob/main/PREVIEW.png "Preview")
 
 ## Version
 
