@@ -320,6 +320,27 @@ class OriginDocs{
 				"pt":"Lista de constantes"}
 			}
 
+		this.header_table ={
+			"command":{
+				"fr": {"number":"Numéro", "name":"Nom", "threadsafe":"Threadsafe", "syntax":"syntaxe"},
+				"cs": {"number":"Číslo", "name":"Název", "threadsafe":"Threadsafe", "syntax":"syntax"},
+				"de": {"number":"Nummer", "name":"Name", "threadsafe":"Threadsafe", "syntax":"Syntax"},
+				"en": {"number":"Number", "name":"Name", "threadsafe":"Threadsafe", "syntax":"Syntax"},
+				"es": {"number":"Número", "name":"Nombre", "threadsafe":"Threadsafe", "syntax":"Sintaxis"},
+				"ja": {"number":"番号", "name":"名前", "threadsafe":"Threadsafe", "syntax":"構文"},
+				"pt": {"number":"Número", "name":"Nome", "threadsafe":"Threadsafe", "syntax":"Sintaxe"}
+			},
+			"constant":{
+				"fr": {"name":"Nom", "value":"Valeur", "deprecated":"déprécier"},
+				"cs": {"name":"Název", "value":"Hodnota", "deprecated":"deprecated"},
+				"de": {"name":"Name", "value":"Wert", "deprecated":"deprecated"},
+				"en": {"name":"Name", "value":"Value", "deprecated":"deprecated"},
+				"es": {"name":"Nombre", "value":"Valor", "deprecated":"deprecated"},
+				"ja": {"name":"名前", "value":"値", "deprecated":"deprecated"},
+				"pt": {"name":"Nome", "value":"Valor", "deprecated":"deprecated"}
+			}
+		}
+
 		// interface
 		document.getElementById('domain_theme').setAttribute('data-trg', true);
 		document.getElementById('lang_fr').setAttribute('data-trg', true);
@@ -701,19 +722,19 @@ class OriginDocs{
 		tr = document.createElement('tr');
 
 		th = document.createElement('th');
-		th.innerText = 'Numéro';
+		th.innerText = this.header_table.command[lang].number;
 		tr.appendChild(th);
 
 		th = document.createElement('th');
-		th.innerText = 'Nom';
+		th.innerText = this.header_table.command[lang].name;
 		tr.appendChild(th);
 
 		th = document.createElement('th');
-		th.innerText = 'Threadsafe';
+		th.innerText = this.header_table.command[lang].threadsafe;
 		tr.appendChild(th);
 
 		th = document.createElement('th');
-		th.innerText = 'Syntaxe';
+		th.innerText = this.header_table.command[lang].syntax;
 		tr.appendChild(th);
 
 		thead.appendChild(tr);
@@ -826,15 +847,15 @@ class OriginDocs{
 		tr = document.createElement('tr');
 
 		th = document.createElement('th');
-		th.innerText = 'Nom';
+		th.innerText = this.header_table.constant[lang].name;
 		tr.appendChild(th);
 
 		th = document.createElement('th');
-		th.innerText = 'Valeur';
+		th.innerText = this.header_table.constant[lang].value;
 		tr.appendChild(th);
 
 		th = document.createElement('th');
-		th.innerText = 'Déprécier';
+		th.innerText = this.header_table.constant[lang].deprecated;
 		tr.appendChild(th);
 
 		thead.appendChild(tr);
